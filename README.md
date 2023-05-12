@@ -13,4 +13,4 @@ Como funciona
 
 O sistema recebe a solicitação de um cartão de crédito para um cliente. Com base na renda mensal do cliente, o sistema avalia se a solicitação deve ser aprovada ou não.
 
-Caso a solicitação seja aprovada, é gerado um evento que é enviado para uma fila do RabbitMQ. Um serviço externo irá então processar esse evento e, caso tudo esteja correto, aprovar a criação do cartão de crédito para o cliente.
+Caso a solicitação seja aprovada, é gerado um evento que é enviado para uma fila do RabbitMQ. Um outro serviço interno irá então processar esse evento e, caso tudo esteja correto, aprovar a criação do cartão de crédito para o cliente com o limite baseado depois de aprovado na sua idade. 
